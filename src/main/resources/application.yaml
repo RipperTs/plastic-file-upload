@@ -1,0 +1,44 @@
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  main:
+    allow-circular-references: true
+
+servlet:
+  upload:
+    #\u4E0A\u4F20\u7C7B\u578B 1 \u672C\u5730 2 \u963F\u91CC\u4E91OSS 3 \u817E\u8BAF\u4E91COS 4 \u4E03\u725B\u4E91QNC
+    config: 1
+    oss:
+      endpoint:
+      accessKeyId:
+      accessKeySecret:
+      publicUrl:
+      bucketName:
+        0:
+        1:
+      dir:
+    local:
+      publicUrl:
+      uploadPath:
+        0: D:/private
+        1: D:/public
+      dir: upload
+    cos:
+      region:
+      secretId:
+      secretKey:
+      publicUrl:
+      bucketName:
+        0:
+        1:
+      dir:
+    qnc:
+      accessKey:
+      secretKey:
+      publicUrl:
+      privateUrl:
+      bucketName:
+        0:
+        1:
+      dir:
