@@ -19,8 +19,8 @@ public class UploadController {
 
     @PostMapping("/upload")
     public UploadEntity upload(@RequestPart @RequestParam("file") MultipartFile file,
-                               @ApiParam("文件ID,不传为速记一个uuid") String batchId,
-                               @ApiParam("是否公开 1公开 0私有") String isPublic) throws IOException {
+                               @ApiParam("文件ID,不传为速记一个uuid") @RequestParam(required = false) String batchId,
+                               @ApiParam("是否公开 1公开 0私有") @RequestParam(required = false, defaultValue = "1") String isPublic) throws IOException {
         if (StrUtil.isEmpty(batchId)) {
             batchId = IdUtil.simpleUUID();
         }
